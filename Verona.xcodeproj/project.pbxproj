@@ -1,0 +1,514 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3EFF1B1F1B1F2069000A3040 /* Verona.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFF1B1E1B1F2069000A3040 /* Verona.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3EFF1B251B1F2069000A3040 /* Verona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFF1B191B1F2069000A3040 /* Verona.framework */; };
+		3EFF1B2C1B1F2069000A3040 /* VeronaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */; };
+		3EFF1B361B1F2071000A3040 /* Verona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B351B1F2071000A3040 /* Verona.swift */; };
+		3EFF1B3D1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B3C1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift */; };
+		EBC625A6F833A00B7BD57772 /* Pods_VeronaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3EFF1B261B1F2069000A3040 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EFF1B101B1F2069000A3040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EFF1B181B1F2069000A3040;
+			remoteInfo = Verona;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E7C496D1B28F58600E1FC79 /* VeronaTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VeronaTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		3E7C496E1B29AEBA00E1FC79 /* TryVerona.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TryVerona.playground; sourceTree = SOURCE_ROOT; };
+		3EFF1B191B1F2069000A3040 /* Verona.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Verona.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EFF1B1D1B1F2069000A3040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EFF1B1E1B1F2069000A3040 /* Verona.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verona.h; sourceTree = "<group>"; };
+		3EFF1B241B1F2069000A3040 /* VeronaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VeronaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EFF1B2A1B1F2069000A3040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeronaTests.swift; sourceTree = "<group>"; };
+		3EFF1B351B1F2071000A3040 /* Verona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verona.swift; sourceTree = "<group>"; };
+		3EFF1B3C1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSnapShotSwiftHelpers.swift; sourceTree = "<group>"; };
+		855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.release.xcconfig"; sourceTree = "<group>"; };
+		D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeronaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3EFF1B151B1F2069000A3040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EFF1B211B1F2069000A3040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFF1B251B1F2069000A3040 /* Verona.framework in Frameworks */,
+				EBC625A6F833A00B7BD57772 /* Pods_VeronaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		27E15F6163FF6B2F2E79DAFE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */,
+				855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3EFF1B0F1B1F2069000A3040 = {
+			isa = PBXGroup;
+			children = (
+				3E7C496E1B29AEBA00E1FC79 /* TryVerona.playground */,
+				3EFF1B1B1B1F2069000A3040 /* Verona */,
+				3EFF1B281B1F2069000A3040 /* VeronaTests */,
+				3EFF1B1A1B1F2069000A3040 /* Products */,
+				27E15F6163FF6B2F2E79DAFE /* Pods */,
+				4A2E0E4F9AE45837D5A105DC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3EFF1B1A1B1F2069000A3040 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EFF1B191B1F2069000A3040 /* Verona.framework */,
+				3EFF1B241B1F2069000A3040 /* VeronaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EFF1B1B1B1F2069000A3040 /* Verona */ = {
+			isa = PBXGroup;
+			children = (
+				3EFF1B351B1F2071000A3040 /* Verona.swift */,
+				3EFF1B1E1B1F2069000A3040 /* Verona.h */,
+				3EFF1B1C1B1F2069000A3040 /* Supporting Files */,
+			);
+			path = Verona;
+			sourceTree = "<group>";
+		};
+		3EFF1B1C1B1F2069000A3040 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EFF1B1D1B1F2069000A3040 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3EFF1B281B1F2069000A3040 /* VeronaTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E7C496D1B28F58600E1FC79 /* VeronaTests-Bridging-Header.h */,
+				3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */,
+				3EFF1B291B1F2069000A3040 /* Supporting Files */,
+				3EFF1B3C1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift */,
+			);
+			path = VeronaTests;
+			sourceTree = "<group>";
+		};
+		3EFF1B291B1F2069000A3040 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EFF1B2A1B1F2069000A3040 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4A2E0E4F9AE45837D5A105DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3EFF1B161B1F2069000A3040 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFF1B1F1B1F2069000A3040 /* Verona.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		3EFF1B181B1F2069000A3040 /* Verona */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EFF1B2F1B1F2069000A3040 /* Build configuration list for PBXNativeTarget "Verona" */;
+			buildPhases = (
+				3EFF1B141B1F2069000A3040 /* Sources */,
+				3EFF1B151B1F2069000A3040 /* Frameworks */,
+				3EFF1B161B1F2069000A3040 /* Headers */,
+				3EFF1B171B1F2069000A3040 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Verona;
+			productName = Verona;
+			productReference = 3EFF1B191B1F2069000A3040 /* Verona.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3EFF1B231B1F2069000A3040 /* VeronaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3EFF1B321B1F2069000A3040 /* Build configuration list for PBXNativeTarget "VeronaTests" */;
+			buildPhases = (
+				E234C1856B150A890F47B08B /* Check Pods Manifest.lock */,
+				3EFF1B201B1F2069000A3040 /* Sources */,
+				3EFF1B211B1F2069000A3040 /* Frameworks */,
+				3EFF1B221B1F2069000A3040 /* Resources */,
+				63E70412EAE27591FAAE9B4D /* Copy Pods Resources */,
+				4A3F4566230EB39FE1BF37A2 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3EFF1B271B1F2069000A3040 /* PBXTargetDependency */,
+			);
+			name = VeronaTests;
+			productName = VeronaTests;
+			productReference = 3EFF1B241B1F2069000A3040 /* VeronaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3EFF1B101B1F2069000A3040 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Salvatore Randazzo";
+				TargetAttributes = {
+					3EFF1B181B1F2069000A3040 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					3EFF1B231B1F2069000A3040 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = 3EFF1B131B1F2069000A3040 /* Build configuration list for PBXProject "Verona" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3EFF1B0F1B1F2069000A3040;
+			productRefGroup = 3EFF1B1A1B1F2069000A3040 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3EFF1B181B1F2069000A3040 /* Verona */,
+				3EFF1B231B1F2069000A3040 /* VeronaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3EFF1B171B1F2069000A3040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EFF1B221B1F2069000A3040 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A3F4566230EB39FE1BF37A2 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63E70412EAE27591FAAE9B4D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E234C1856B150A890F47B08B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3EFF1B141B1F2069000A3040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFF1B361B1F2071000A3040 /* Verona.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3EFF1B201B1F2069000A3040 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3EFF1B2C1B1F2069000A3040 /* VeronaTests.swift in Sources */,
+				3EFF1B3D1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3EFF1B271B1F2069000A3040 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EFF1B181B1F2069000A3040 /* Verona */;
+			targetProxy = 3EFF1B261B1F2069000A3040 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3EFF1B2D1B1F2069000A3040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3EFF1B2E1B1F2069000A3040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3EFF1B301B1F2069000A3040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Verona/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EFF1B311B1F2069000A3040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Verona/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3EFF1B331B1F2069000A3040 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages\\\"\"",
+				);
+				INFOPLIST_FILE = VeronaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VeronaTests/VeronaTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3EFF1B341B1F2069000A3040 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = VeronaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "VeronaTests/VeronaTests-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3EFF1B131B1F2069000A3040 /* Build configuration list for PBXProject "Verona" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EFF1B2D1B1F2069000A3040 /* Debug */,
+				3EFF1B2E1B1F2069000A3040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EFF1B2F1B1F2069000A3040 /* Build configuration list for PBXNativeTarget "Verona" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EFF1B301B1F2069000A3040 /* Debug */,
+				3EFF1B311B1F2069000A3040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3EFF1B321B1F2069000A3040 /* Build configuration list for PBXNativeTarget "VeronaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3EFF1B331B1F2069000A3040 /* Debug */,
+				3EFF1B341B1F2069000A3040 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3EFF1B101B1F2069000A3040 /* Project object */;
+}
