@@ -44,10 +44,14 @@ let attString = NSAttributedString(string: string, attributes: builder.attribute
 
 ###Tests
 Verona is currently unit tested using FBSnapshotTestCase for all cases. To run the unit tests, be sure to run cocoapods first.
+Test results can be found here: https://github.com/SRandazzo/Verona/tree/master/VeronaTests/ReferenceImages/VeronaTests.VeronaTests
+
+All tests should be run against the `iPhone 4s iOS 8+`
 
 ##Try it out
 The easiest way to try out Verona is through the included Playground `TryVerona.playground`
 
+To setup the project for development + tests, clone this repo, `cd` into Verona and run `make bootstrap`
 
 ##Contributing
 Enjoying Verona!? We can use your help!
