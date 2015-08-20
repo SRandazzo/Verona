@@ -15,7 +15,7 @@ class VeronaTests: FBSnapshotTestCase {
     
     override func setUp() {
         super.setUp()
-        recordMode = true
+        recordMode = false
     }
     
     func testItCreatesFontsCorrectly() {
