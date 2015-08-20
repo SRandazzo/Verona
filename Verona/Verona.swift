@@ -31,7 +31,7 @@ public enum NSAttributedStringAttribute {
     case Color(UIColor)
     case BackgroundColor(UIColor)
     case Ligature(Bool)
-    case Kerning(Int)
+    case Kerning(CGFloat)
     //TODO: .PatternDot, .PatternDash, .PatternDashDot, PatternDashDotDot, .ByWord do not appear to work with StrikeThrough or Underline
     case Strikethrough(NSUnderlineStyle)
     case UnderlineStyle(NSUnderlineStyle)
