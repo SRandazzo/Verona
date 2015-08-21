@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'Verona'
-  s.version = '1.0'
+  s.version = '1.0.1'
   s.license = 'MIT'
   s.summary = 'Elegant, typesafe, NSAttributedString creation in Swift'
   s.homepage = 'https://github.com/SRandazzo/Verona'
