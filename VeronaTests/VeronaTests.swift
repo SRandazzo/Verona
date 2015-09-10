@@ -76,7 +76,7 @@ class VeronaTests: FBSnapshotTestCase {
         let container = UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: ligatureLabel.frame.width, height: ligatureLabel.frame.height + noLigatureLabel.frame.height)))
         
         container.addSubview(ligatureLabel)
-        noLigatureLabel.frame.offset(dx: 0, dy: ligatureLabel.frame.height)
+        noLigatureLabel.frame.offsetInPlace(dx: 0, dy: ligatureLabel.frame.height)
         container.addSubview(noLigatureLabel)
         
         FBSnapShotVerifyLayer(container.layer)
