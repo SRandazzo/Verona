@@ -102,7 +102,7 @@ public enum NSAttributedStringAttribute {
 
 public class NSAttributedStringAttributeBuilder {
     
-    private var attributesDictionary: [NSObject : AnyObject] = [ : ]
+    private var attributesDictionary: [String : AnyObject] = [ : ]
     
     public init() { }
     
@@ -111,7 +111,7 @@ public class NSAttributedStringAttributeBuilder {
         attributesDictionary.updateValue(keyValuePair.value, forKey: keyValuePair.key)
     }
     
-    public func attributedStringAttributesDictionary() -> [NSObject: AnyObject] {
+    public func attributedStringAttributesDictionary() -> [String: AnyObject]? {
         return attributesDictionary
     }
 }

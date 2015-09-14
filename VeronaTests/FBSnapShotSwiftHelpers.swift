@@ -14,8 +14,15 @@ extension FBSnapshotTestCase {
     func FBSnapShotVerifyLayer(layer: CALayer, identifier: String?) {
         
         var error: NSError?
-        var referenceImagesDirectory = FB_REFERENCE_IMAGE_DIR
-        let comparisonSuccess = self.compareSnapshotOfLayer(layer, referenceImagesDirectory: referenceImagesDirectory, identifier: identifier, error: &error)
+        let referenceImagesDirectory = FB_REFERENCE_IMAGE_DIR
+        let comparisonSuccess: Bool
+        do {
+            try self.compareSnapshotOfLayer(layer, referenceImagesDirectory: referenceImagesDirectory, identifier: identifier)
+            comparisonSuccess = true
+        } catch let error1 as NSError {
+            error = error1
+            comparisonSuccess = false
+        }
         XCTAssertTrue(comparisonSuccess, "Snapshot comparison failed: \(error)")
         XCTAssertFalse(self.recordMode, "Test ran in record mode. Reference image is now saved. Disable record mode to perform an actual snapshot comparison!")
     }
