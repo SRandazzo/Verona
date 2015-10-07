@@ -8,5 +8,5 @@ target 'Verona' do
 end
 
 target 'VeronaTests' do
-pod 'FBSnapshotTestCase', '1.8.1'
+pod 'FBSnapshotTestCase', '2.0.4'
 end
