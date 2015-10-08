@@ -8,5 +8,5 @@ target 'Verona' do
 end
 
 target 'VeronaTests' do
-pod 'FBSnapshotTestCase', '2.0.4'
+pod 'FBSnapshotTestCase/SwiftSupport', :git => 'https://github.com/facebook/ios-snapshot-test-case.git', :branch => 'master'
 end

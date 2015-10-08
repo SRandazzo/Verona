@@ -1,14 +1,23 @@
 PODS:
-  - FBSnapshotTestCase (2.0.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.0.4)
   - FBSnapshotTestCase/Core (2.0.4)
   - FBSnapshotTestCase/SwiftSupport (2.0.4):
     - FBSnapshotTestCase/Core
 
 DEPENDENCIES:
-  - FBSnapshotTestCase (= 2.0.4)
+  - FBSnapshotTestCase/SwiftSupport (from `https://github.com/facebook/ios-snapshot-test-case.git`,
+    branch `master`)
+
+EXTERNAL SOURCES:
+  FBSnapshotTestCase:
+    :branch: master
+    :git: https://github.com/facebook/ios-snapshot-test-case.git
+
+CHECKOUT OPTIONS:
+  FBSnapshotTestCase:
+    :commit: b853a68f95abf8481104bf4068f5e82cf2c766ef
+    :git: https://github.com/facebook/ios-snapshot-test-case.git
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: d94cf34841c9e77390e29009e8e2713479d48753
+  FBSnapshotTestCase: 6c9fe22920e7bc8a98b6b3703ba24cd5ba0978ce
 
 COCOAPODS: 0.38.2

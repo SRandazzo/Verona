@@ -1,0 +1,67 @@
+        -:    0:Source:/Users/Sal/Documents/GIT/Verona/Pods/FBSnapshotTestCase/FBSnapshotTestCase/Categories/UIImage+Snapshot.m
+        -:    0:Graph:/Users/Sal/Library/Developer/Xcode/DerivedData/Verona-fgfbmnilklhvdihbxoslbfynjgbp/Build/Intermediates/Pods.build/Debug-iphonesimulator/FBSnapshotTestCase.build/Objects-normal/x86_64/UIImage+Snapshot.gcno
+        -:    0:Data:/Users/Sal/Library/Developer/Xcode/DerivedData/Verona-fgfbmnilklhvdihbxoslbfynjgbp/Build/Intermediates/Pods.build/Debug-iphonesimulator/FBSnapshotTestCase.build/Objects-normal/x86_64/UIImage+Snapshot.gcda
+        -:    0:Runs:25
+        -:    0:Programs:1
+        -:    1:/*
+        -:    2: *  Copyright (c) 2015, Facebook, Inc.
+        -:    3: *  All rights reserved.
+        -:    4: *
+        -:    5: *  This source code is licensed under the BSD-style license found in the
+        -:    6: *  LICENSE file in the root directory of this source tree. An additional grant
+        -:    7: *  of patent rights can be found in the PATENTS file in the same directory.
+        -:    8: *
+        -:    9: */
+        -:   10:
+        -:   11:#import <FBSnapshotTestCase/UIImage+Snapshot.h>
+        -:   12:
+        -:   13:@implementation UIImage (Snapshot)
+        -:   14:
+        -:   15:+ (UIImage *)fb_imageForLayer:(CALayer *)layer
+        -:   16:{
+603979776:   17:  CGRect bounds = layer.bounds;
+1207959552:   18:  NSAssert1(CGRectGetWidth(bounds), @"Zero width for layer %@", layer);
+1207959552:   19:  NSAssert1(CGRectGetHeight(bounds), @"Zero height for layer %@", layer);
+        -:   20:
+301989888:   21:  UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0);
+301989888:   22:  CGContextRef context = UIGraphicsGetCurrentContext();
+1207959552:   23:  NSAssert1(context, @"Could not generate context for layer %@", layer);
+301989888:   24:  CGContextSaveGState(context);
+301989888:   25:  [layer layoutIfNeeded];
+301989888:   26:  [layer renderInContext:context];
+301989888:   27:  CGContextRestoreGState(context);
+        -:   28:
+301989888:   29:  UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
+301989888:   30:  UIGraphicsEndImageContext();
+301989888:   31:  return snapshot;
+301989888:   32:}
+        -:   33:
+        -:   34:+ (UIImage *)fb_imageForViewLayer:(UIView *)view
+        -:   35:{
+    #####:   36:  [view layoutIfNeeded];
+    #####:   37:  return [self fb_imageForLayer:view.layer];
+    #####:   38:}
+        -:   39:
+        -:   40:+ (UIImage *)fb_imageForView:(UIView *)view
+        -:   41:{
+    #####:   42:  CGRect bounds = view.bounds;
+    #####:   43:  NSAssert1(CGRectGetWidth(bounds), @"Zero width for view %@", view);
+    #####:   44:  NSAssert1(CGRectGetHeight(bounds), @"Zero height for view %@", view);  
+        -:   45:
+    #####:   46:  UIWindow *window = view.window;
+    #####:   47:  if (window == nil) {
+    #####:   48:    window = [[UIWindow alloc] initWithFrame:bounds];
+    #####:   49:    [window addSubview:view];
+    #####:   50:    [window makeKeyAndVisible];
+    #####:   51:  }
+        -:   52:  
+    #####:   53:  UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0);
+    #####:   54:  [view layoutIfNeeded];
+    #####:   55:  [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+        -:   56:
+    #####:   57:  UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
+    #####:   58:  UIGraphicsEndImageContext();
+    #####:   59:  return snapshot;
+    #####:   60:}
+        -:   61:
+        -:   62:@end

@@ -7,15 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E9496E21BC70E310016B12A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9496E11BC70E310016B12A /* AppDelegate.swift */; };
+		3E9496E41BC70E310016B12A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9496E31BC70E310016B12A /* ViewController.swift */; };
+		3E9496E71BC70E310016B12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9496E51BC70E310016B12A /* Main.storyboard */; };
+		3E9496E91BC70E310016B12A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E9496E81BC70E310016B12A /* Assets.xcassets */; };
+		3E9496EC1BC70E310016B12A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E9496EA1BC70E310016B12A /* LaunchScreen.storyboard */; };
+		3E9496F71BC73FA70016B12A /* Verona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFF1B191B1F2069000A3040 /* Verona.framework */; };
 		3EFF1B1F1B1F2069000A3040 /* Verona.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EFF1B1E1B1F2069000A3040 /* Verona.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3EFF1B251B1F2069000A3040 /* Verona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFF1B191B1F2069000A3040 /* Verona.framework */; };
 		3EFF1B2C1B1F2069000A3040 /* VeronaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */; };
-		3EFF1B361B1F2071000A3040 /* Verona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B351B1F2071000A3040 /* Verona.swift */; };
-		3EFF1B3D1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B3C1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift */; };
+		3EFF1B361B1F2071000A3040 /* Verona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B351B1F2071000A3040 /* Verona.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		EBC625A6F833A00B7BD57772 /* Pods_VeronaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3E9496F11BC70EA60016B12A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EFF1B101B1F2069000A3040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E9496DE1BC70E300016B12A;
+			remoteInfo = VeronaApp;
+		};
+		3E9496F51BC73F9E0016B12A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EFF1B101B1F2069000A3040 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EFF1B181B1F2069000A3040;
+			remoteInfo = Verona;
+		};
 		3EFF1B261B1F2069000A3040 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3EFF1B101B1F2069000A3040 /* Project object */;
@@ -27,8 +46,14 @@
 
 /* Begin PBXFileReference section */
 		03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3E7C496D1B28F58600E1FC79 /* VeronaTests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VeronaTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		3E7C496E1B29AEBA00E1FC79 /* TryVerona.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TryVerona.playground; sourceTree = SOURCE_ROOT; };
+		3E9496DF1BC70E300016B12A /* VeronaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeronaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E9496E11BC70E310016B12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E9496E31BC70E310016B12A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3E9496E61BC70E310016B12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E9496E81BC70E310016B12A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3E9496EB1BC70E310016B12A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3E9496ED1BC70E310016B12A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFF1B191B1F2069000A3040 /* Verona.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Verona.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFF1B1D1B1F2069000A3040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFF1B1E1B1F2069000A3040 /* Verona.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Verona.h; sourceTree = "<group>"; };
@@ -36,12 +61,19 @@
 		3EFF1B2A1B1F2069000A3040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeronaTests.swift; sourceTree = "<group>"; };
 		3EFF1B351B1F2071000A3040 /* Verona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verona.swift; sourceTree = "<group>"; };
-		3EFF1B3C1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBSnapShotSwiftHelpers.swift; sourceTree = "<group>"; };
 		855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.release.xcconfig"; sourceTree = "<group>"; };
 		D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeronaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3E9496DC1BC70E300016B12A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9496F71BC73FA70016B12A /* Verona.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EFF1B151B1F2069000A3040 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -70,12 +102,26 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3E9496E01BC70E310016B12A /* VeronaApp */ = {
+			isa = PBXGroup;
+			children = (
+				3E9496E11BC70E310016B12A /* AppDelegate.swift */,
+				3E9496E31BC70E310016B12A /* ViewController.swift */,
+				3E9496E51BC70E310016B12A /* Main.storyboard */,
+				3E9496E81BC70E310016B12A /* Assets.xcassets */,
+				3E9496EA1BC70E310016B12A /* LaunchScreen.storyboard */,
+				3E9496ED1BC70E310016B12A /* Info.plist */,
+			);
+			path = VeronaApp;
+			sourceTree = "<group>";
+		};
 		3EFF1B0F1B1F2069000A3040 = {
 			isa = PBXGroup;
 			children = (
 				3E7C496E1B29AEBA00E1FC79 /* TryVerona.playground */,
 				3EFF1B1B1B1F2069000A3040 /* Verona */,
 				3EFF1B281B1F2069000A3040 /* VeronaTests */,
+				3E9496E01BC70E310016B12A /* VeronaApp */,
 				3EFF1B1A1B1F2069000A3040 /* Products */,
 				27E15F6163FF6B2F2E79DAFE /* Pods */,
 				4A2E0E4F9AE45837D5A105DC /* Frameworks */,
@@ -87,6 +133,7 @@
 			children = (
 				3EFF1B191B1F2069000A3040 /* Verona.framework */,
 				3EFF1B241B1F2069000A3040 /* VeronaTests.xctest */,
+				3E9496DF1BC70E300016B12A /* VeronaApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,10 +159,8 @@
 		3EFF1B281B1F2069000A3040 /* VeronaTests */ = {
 			isa = PBXGroup;
 			children = (
-				3E7C496D1B28F58600E1FC79 /* VeronaTests-Bridging-Header.h */,
 				3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */,
 				3EFF1B291B1F2069000A3040 /* Supporting Files */,
-				3EFF1B3C1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift */,
 			);
 			path = VeronaTests;
 			sourceTree = "<group>";
@@ -150,6 +195,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		3E9496DE1BC70E300016B12A /* VeronaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E9496F01BC70E310016B12A /* Build configuration list for PBXNativeTarget "VeronaApp" */;
+			buildPhases = (
+				3E9496DB1BC70E300016B12A /* Sources */,
+				3E9496DC1BC70E300016B12A /* Frameworks */,
+				3E9496DD1BC70E300016B12A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E9496F61BC73F9E0016B12A /* PBXTargetDependency */,
+			);
+			name = VeronaApp;
+			productName = VeronaApp;
+			productReference = 3E9496DF1BC70E300016B12A /* VeronaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		3EFF1B181B1F2069000A3040 /* Verona */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EFF1B2F1B1F2069000A3040 /* Build configuration list for PBXNativeTarget "Verona" */;
@@ -183,6 +246,7 @@
 			);
 			dependencies = (
 				3EFF1B271B1F2069000A3040 /* PBXTargetDependency */,
+				3E9496F21BC70EA60016B12A /* PBXTargetDependency */,
 			);
 			name = VeronaTests;
 			productName = VeronaTests;
@@ -200,11 +264,15 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Salvatore Randazzo";
 				TargetAttributes = {
+					3E9496DE1BC70E300016B12A = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					3EFF1B181B1F2069000A3040 = {
 						CreatedOnToolsVersion = 6.3.2;
 					};
 					3EFF1B231B1F2069000A3040 = {
 						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 3E9496DE1BC70E300016B12A;
 					};
 				};
 			};
@@ -214,6 +282,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 3EFF1B0F1B1F2069000A3040;
 			productRefGroup = 3EFF1B1A1B1F2069000A3040 /* Products */;
@@ -222,11 +291,22 @@
 			targets = (
 				3EFF1B181B1F2069000A3040 /* Verona */,
 				3EFF1B231B1F2069000A3040 /* VeronaTests */,
+				3E9496DE1BC70E300016B12A /* VeronaApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3E9496DD1BC70E300016B12A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9496EC1BC70E310016B12A /* LaunchScreen.storyboard in Resources */,
+				3E9496E91BC70E310016B12A /* Assets.xcassets in Resources */,
+				3E9496E71BC70E310016B12A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EFF1B171B1F2069000A3040 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -292,6 +372,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3E9496DB1BC70E300016B12A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E9496E41BC70E310016B12A /* ViewController.swift in Sources */,
+				3E9496E21BC70E310016B12A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3EFF1B141B1F2069000A3040 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -305,13 +394,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFF1B2C1B1F2069000A3040 /* VeronaTests.swift in Sources */,
-				3EFF1B3D1B1F2D65000A3040 /* FBSnapShotSwiftHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3E9496F21BC70EA60016B12A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E9496DE1BC70E300016B12A /* VeronaApp */;
+			targetProxy = 3E9496F11BC70EA60016B12A /* PBXContainerItemProxy */;
+		};
+		3E9496F61BC73F9E0016B12A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3EFF1B181B1F2069000A3040 /* Verona */;
+			targetProxy = 3E9496F51BC73F9E0016B12A /* PBXContainerItemProxy */;
+		};
 		3EFF1B271B1F2069000A3040 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3EFF1B181B1F2069000A3040 /* Verona */;
@@ -319,7 +417,51 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		3E9496E51BC70E310016B12A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E9496E61BC70E310016B12A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3E9496EA1BC70E310016B12A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E9496EB1BC70E310016B12A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3E9496EE1BC70E310016B12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = VeronaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.randazzo.VeronaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E9496EF1BC70E310016B12A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VeronaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.randazzo.VeronaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		3EFF1B2D1B1F2069000A3040 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -418,6 +560,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = Verona/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -436,6 +579,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
 				INFOPLIST_FILE = Verona/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -449,6 +593,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -457,14 +602,14 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"FB_REFERENCE_IMAGE_DIR=\"\\\"$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages\\\"\"",
 				);
 				INFOPLIST_FILE = VeronaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.randazzo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "VeronaTests/VeronaTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeronaApp.app/VeronaApp";
 			};
 			name = Debug;
 		};
@@ -472,6 +617,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */;
 			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -481,13 +627,22 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.randazzo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "VeronaTests/VeronaTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeronaApp.app/VeronaApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3E9496F01BC70E310016B12A /* Build configuration list for PBXNativeTarget "VeronaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E9496EE1BC70E310016B12A /* Debug */,
+				3E9496EF1BC70E310016B12A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		3EFF1B131B1F2069000A3040 /* Build configuration list for PBXProject "Verona" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
