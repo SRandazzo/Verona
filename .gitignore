@@ -23,6 +23,9 @@ Pods/
 # Carthage
 Carthage/Build
 
+#Code Coverage
+app.coverage.txt
+xctest.coverage.text
+
 # Mac Stuff
 .DS_Store
-

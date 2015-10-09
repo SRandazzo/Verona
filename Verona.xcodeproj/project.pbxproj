@@ -594,6 +594,7 @@
 			baseConfigurationReference = 03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -618,6 +619,7 @@
 			baseConfigurationReference = 855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_CODE_COVERAGE = NO;
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -642,6 +644,7 @@
 				3E9496EF1BC70E310016B12A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EFF1B131B1F2069000A3040 /* Build configuration list for PBXProject "Verona" */ = {
 			isa = XCConfigurationList;
