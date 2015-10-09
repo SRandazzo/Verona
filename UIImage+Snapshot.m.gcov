@@ -1,7 +1,7 @@
         -:    0:Source:/Users/Sal/Documents/GIT/Verona/Pods/FBSnapshotTestCase/FBSnapshotTestCase/Categories/UIImage+Snapshot.m
         -:    0:Graph:/Users/Sal/Library/Developer/Xcode/DerivedData/Verona-fgfbmnilklhvdihbxoslbfynjgbp/Build/Intermediates/Pods.build/Debug-iphonesimulator/FBSnapshotTestCase.build/Objects-normal/x86_64/UIImage+Snapshot.gcno
         -:    0:Data:/Users/Sal/Library/Developer/Xcode/DerivedData/Verona-fgfbmnilklhvdihbxoslbfynjgbp/Build/Intermediates/Pods.build/Debug-iphonesimulator/FBSnapshotTestCase.build/Objects-normal/x86_64/UIImage+Snapshot.gcda
-        -:    0:Runs:25
+        -:    0:Runs:75
         -:    0:Programs:1
         -:    1:/*
         -:    2: *  Copyright (c) 2015, Facebook, Inc.
@@ -19,22 +19,22 @@
         -:   14:
         -:   15:+ (UIImage *)fb_imageForLayer:(CALayer *)layer
         -:   16:{
-603979776:   17:  CGRect bounds = layer.bounds;
-1207959552:   18:  NSAssert1(CGRectGetWidth(bounds), @"Zero width for layer %@", layer);
-1207959552:   19:  NSAssert1(CGRectGetHeight(bounds), @"Zero height for layer %@", layer);
+10133099765563392:   17:  CGRect bounds = layer.bounds;
+20266199531126784:   18:  NSAssert1(CGRectGetWidth(bounds), @"Zero width for layer %@", layer);
+20266199531126784:   19:  NSAssert1(CGRectGetHeight(bounds), @"Zero height for layer %@", layer);
         -:   20:
-301989888:   21:  UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0);
-301989888:   22:  CGContextRef context = UIGraphicsGetCurrentContext();
-1207959552:   23:  NSAssert1(context, @"Could not generate context for layer %@", layer);
-301989888:   24:  CGContextSaveGState(context);
-301989888:   25:  [layer layoutIfNeeded];
-301989888:   26:  [layer renderInContext:context];
-301989888:   27:  CGContextRestoreGState(context);
+5066549882781696:   21:  UIGraphicsBeginImageContextWithOptions(bounds.size, NO, 0);
+5066549882781696:   22:  CGContextRef context = UIGraphicsGetCurrentContext();
+20266199531126784:   23:  NSAssert1(context, @"Could not generate context for layer %@", layer);
+5066549882781696:   24:  CGContextSaveGState(context);
+5066549882781696:   25:  [layer layoutIfNeeded];
+5066549882781696:   26:  [layer renderInContext:context];
+5066549882781696:   27:  CGContextRestoreGState(context);
         -:   28:
-301989888:   29:  UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
-301989888:   30:  UIGraphicsEndImageContext();
-301989888:   31:  return snapshot;
-301989888:   32:}
+5066549882781696:   29:  UIImage *snapshot = UIGraphicsGetImageFromCurrentImageContext();
+5066549882781696:   30:  UIGraphicsEndImageContext();
+5066549882781696:   31:  return snapshot;
+5066549882781696:   32:}
         -:   33:
         -:   34:+ (UIImage *)fb_imageForViewLayer:(UIView *)view
         -:   35:{

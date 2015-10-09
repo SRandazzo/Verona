@@ -8,7 +8,6 @@ set -o pipefail && xctool \
 -configuration ${configuration} \
 -sdk iphonesimulator \
 -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6s' \
-GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES \
 test
 
 #
