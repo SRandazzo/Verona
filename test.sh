@@ -1,5 +1,5 @@
 workspace='Verona.xcworkspace'
-scheme='Verona'
+scheme='VeronaApp'
 configuration='Debug'
 
 set -o pipefail && xctool \

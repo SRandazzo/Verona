@@ -26,6 +26,8 @@ Carthage/Build
 #Code Coverage
 app.coverage.txt
 xctest.coverage.text
+CGGeometry.h.gcov
+
 
 # Mac Stuff
 .DS_Store
