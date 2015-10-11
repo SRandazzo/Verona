@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SRandazzo/Verona.svg)](https://travis-ci.org/SRandazzo/Verona) [![codecov.io](http://codecov.io/github/SRandazzo/Verona/coverage.svg?branch=master)](http://codecov.io/github/SRandazzo/Verona?branch=master)
+
 #Verona
 Verona is a microframework for elegantly creating `NSAttributedString` in Swift.
 
