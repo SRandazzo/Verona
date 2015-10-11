@@ -14,5 +14,4 @@ script:
   - bash -x test.sh
 
 after_success:
-  - find ~/Library/Developer/Xcode/DerivedData -name 'Coverage.profdata'
   - bash <(curl -s https://codecov.io/bash)

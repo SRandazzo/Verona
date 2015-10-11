@@ -1,19 +1,11 @@
-workspace='Verona.xcworkspace'
-scheme='Verona'
-configuration='Debug'
+WORKSPACE='Verona.xcworkspace'
+SCHEME='Verona'
+CONFIGURATION='Debug'
 
-# xctool \
-# -workspace ${workspace} \
-# -scheme ${scheme} \
-# -configuration ${configuration} \
-# -sdk iphonesimulator \
-# -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6s' \
-# build test
-
-xcodebuild test \
-  -workspace ${workspace} \
-  -scheme ${scheme} \
-  -configuration ${configuration}\
+set -o pipefail && xcodebuild build test \
+  -workspace ${WORKSPACE} \
+  -scheme ${SCHEME} \
+  -configuration ${CONFIGURATION}\
   -sdk iphonesimulator \
-  -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6s' \
-  -enableCodeCoverage YES
+  -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6' \
+  -enableCodeCoverage YES | xcpretty -c --test
