@@ -183,7 +183,6 @@ public extension NSAttributedString {
     
     public class func make(make: ((make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
         let builder = NSAttributedStringAttributeBuilder()
-        let final = builder.finalize()
-        return final
+        return builder.finalize()
     }
 }
