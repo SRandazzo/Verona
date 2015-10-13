@@ -100,19 +100,75 @@ public enum NSAttributedStringAttribute {
     }
 }
 
+public enum VeronaError: ErrorType {
+    case StringNotSet(string: NSString)
+}
+
 public class NSAttributedStringAttributeBuilder {
     
-    private var attributesDictionary: [String : AnyObject] = [ : ]
+    
+    private var clearAttributesOnNextString: Bool = false
+    
+    private var currentString: String = ""
+    private var strings = [String]()
+    
+    var currentAttributes: [String : AnyObject] = [ : ]
+    var attributes = [[String: AnyObject]]()
     
     public init() { }
     
-    public func setAttribute(attribute: NSAttributedStringAttribute) {
+    public func setAttribute(attribute: NSAttributedStringAttribute) throws {
         let keyValuePair = attribute.attributedStringKeyValuePair
-        attributesDictionary.updateValue(keyValuePair.value, forKey: keyValuePair.key)
+        currentAttributes.updateValue(keyValuePair.value, forKey: keyValuePair.key)
     }
     
-    public func attributedStringAttributesDictionary() -> [String: AnyObject]? {
-        return attributesDictionary
+    public func clearAttributes() {
+        currentAttributes.removeAll()
+    }
+    
+    public func addAttributes(attributes: [String: AnyObject]) {
+        for (key, value) in attributes {
+            currentAttributes.updateValue(value, forKey: key)
+        }
+    }
+    
+    public func removeAttribute(attribute: NSAttributedStringAttribute) throws {
+        let keyValuePair = attribute.attributedStringKeyValuePair
+        currentAttributes.removeValueForKey(keyValuePair.key)
+    }
+    
+    public func removeAttributes(attributes: [String: AnyObject]) {
+        for (key, _) in attributes {
+            currentAttributes.removeValueForKey(key)
+        }
+    }
+    
+    public func nextString(string: String) {
+        endCurrent()
+        currentString = string
+    }
+    
+    private func endCurrent() {
+        attributes.append(currentAttributes)
+        strings.append(currentString)
+        if (clearAttributesOnNextString) {
+            clearAttributes()
+        }
+        currentString = ""
+    }
+    
+    func finalize() -> NSAttributedString {
+        let attrStrings = zip(strings, attributes)
+            .map { (str: String, attr: [String: AnyObject]) in
+                return NSAttributedString(string: str, attributes: attr)
+            }
+        
+        // TODO: Get reduce to work instead of whats below. Was showing ambiguous errors with mutable string as accumulator
+        let mut = NSMutableAttributedString()
+        for attr in attrStrings {
+            mut.appendAttributedString(attr)
+        }
+        return mut
     }
 }
 
@@ -120,7 +176,14 @@ public extension NSAttributedString {
     
     public class func make(string: String, make: ((make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
         let builder = NSAttributedStringAttributeBuilder()
+        builder.nextString(string)
         make(make: builder)
-        return NSAttributedString(string: string, attributes: builder.attributedStringAttributesDictionary())
+        return builder.finalize()
+    }
+    
+    public class func make(make: ((make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
+        let builder = NSAttributedStringAttributeBuilder()
+        let final = builder.finalize()
+        return final
     }
 }
