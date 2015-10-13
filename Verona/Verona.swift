@@ -100,12 +100,7 @@ public enum NSAttributedStringAttribute {
     }
 }
 
-public enum VeronaError: ErrorType {
-    case StringNotSet(string: NSString)
-}
-
 public class NSAttributedStringAttributeBuilder {
-    
     
     private var clearAttributesOnNextString: Bool = false
     
@@ -116,6 +111,8 @@ public class NSAttributedStringAttributeBuilder {
     var attributes = [[String: AnyObject]]()
     
     public init() { }
+    
+    // Builder functions
     
     public func setAttribute(attribute: NSAttributedStringAttribute) throws {
         let keyValuePair = attribute.attributedStringKeyValuePair
@@ -148,6 +145,9 @@ public class NSAttributedStringAttributeBuilder {
         currentString = string
     }
     
+    
+    // Internal helpers
+    
     private func endCurrent() {
         attributes.append(currentAttributes)
         strings.append(currentString)
@@ -157,7 +157,7 @@ public class NSAttributedStringAttributeBuilder {
         currentString = ""
     }
     
-    func finalize() -> NSAttributedString {
+    private func finalize() -> NSAttributedString {
         let attrStrings = zip(strings, attributes)
             .map { (str: String, attr: [String: AnyObject]) in
                 return NSAttributedString(string: str, attributes: attr)
