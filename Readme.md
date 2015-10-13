@@ -66,7 +66,7 @@ builder.addAttributes(attributes: [String: AnyObject])
 builder.removeAttribute(attribute: NSAttributedStringAttribute) 
 builder.removeAttributes(attributes: [String: AnyObject])
 builder.nextString(string: String)
-builder.clearAttributesOnNextString = Bool
+builder.clearAttributesOnNextString = Bool (Default is false)
 ```
 
 ###Tests
