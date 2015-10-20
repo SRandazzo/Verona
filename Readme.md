@@ -40,8 +40,33 @@ let builder = NSAttributedStringAttributeBuilder()
 builder.setAttribute(.Font(UIFont(name: "HelveticaNeue", size: 18)!))
 builder.setAttribute(NSAttributedStringAttribute.Kerning(1))
 
-let attString = NSAttributedString(string: string, attributes: builder.attributedStringAttributesDictionary())
+let attString = NSAttributedString(string: string, attributes: builder.currentAttributes)
 
+```
+
+###Creating strings with multiple attributes for ranges
+
+```Swift
+let attributedString = NSAttributedString.make(make: { (make: NSAttributedStringAttributeBuilder) -> Void in
+    make.nextString("This is a regular string")
+    make.setAttribute(.Font(UIFont.systemFontOfSize(20)))
+    make.nextString("This is a bold string")
+    make.setAttribute(.Font(UIFont.boldSystemFontOfSize(20)))
+    make.clearAttributesOnNextString = true
+    make.nextString("This is a default string")
+})
+```
+
+###Available builder methods
+
+```Swift
+builder.setAttribute(attribute: NSAttributedStringAttribute)
+builder.clearAttributes()
+builder.addAttributes(attributes: [String: AnyObject])
+builder.removeAttribute(attribute: NSAttributedStringAttribute) 
+builder.removeAttributes(attributes: [String: AnyObject])
+builder.nextString(string: String)
+builder.clearAttributesOnNextString = Bool (Default is false)
 ```
 
 ###Tests
