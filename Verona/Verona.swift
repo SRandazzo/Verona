@@ -9,118 +9,118 @@
 import Foundation
 
 public enum NSTextEffectAttributeStyle {
-    case LetterPressStyle
+    case letterPressStyle
     
     public var attributedAttributeName: String {
         switch self {
-        case .LetterPressStyle:
+        case .letterPressStyle:
             return NSTextEffectLetterpressStyle
         }
     }
 }
 
 public enum VerticalGlyphFormDirection: Int {
-    case Horizontal = 0
-    case Vertical = 1
+    case horizontal = 0
+    case vertical = 1
 }
 
 public enum NSAttributedStringAttribute {
     
-    case Font(UIFont)
-    case ParagraphStyle(NSParagraphStyle)
-    case Color(UIColor)
-    case BackgroundColor(UIColor)
-    case Ligature(Bool)
-    case Kerning(CGFloat)
+    case font(UIFont)
+    case paragraphStyle(NSParagraphStyle)
+    case color(UIColor)
+    case backgroundColor(UIColor)
+    case ligature(Bool)
+    case kerning(CGFloat)
     //TODO: .PatternDot, .PatternDash, .PatternDashDot, PatternDashDotDot, .ByWord do not appear to work with StrikeThrough or Underline
-    case Strikethrough(NSUnderlineStyle)
-    case UnderlineStyle(NSUnderlineStyle)
-    case UnderlineColor(UIColor)
-    case StrikethroughColor(UIColor)
-    case StrokeColor(UIColor)
-    case StrokeWidth(CGFloat)
-    case Shadow(NSShadow)
-    case TextEffect(NSTextEffectAttributeStyle)
-    case Attachment(NSTextAttachment)
-    case Link(NSURL)
-    case LinkAsString(String)
-    case BaseLineOffset(CGFloat)
-    case Obliqueness(CGFloat)
-    case Expansion(CGFloat)
-    case WritingDirection([NSTextWritingDirection])
-    case VerticalGlyphForm(VerticalGlyphFormDirection) //1 vertical, 0 horiztonal
+    case strikethrough(NSUnderlineStyle)
+    case underlineStyle(NSUnderlineStyle)
+    case underlineColor(UIColor)
+    case strikethroughColor(UIColor)
+    case strokeColor(UIColor)
+    case strokeWidth(CGFloat)
+    case shadow(NSShadow)
+    case textEffect(NSTextEffectAttributeStyle)
+    case attachment(NSTextAttachment)
+    case link(URL)
+    case linkAsString(String)
+    case baseLineOffset(CGFloat)
+    case obliqueness(CGFloat)
+    case expansion(CGFloat)
+    case writingDirection([NSTextWritingDirection])
+    case verticalGlyphForm(VerticalGlyphFormDirection) //1 vertical, 0 horiztonal
     
-    public var attributedStringKeyValuePair: (key: String, value: AnyObject) {
+    public var attributedStringKeyValuePair: (key: String, value: Any) {
         switch self {
-        case .Font(let font):
+        case .font(let font):
             return (NSFontAttributeName, font)
-        case .ParagraphStyle(let style):
+        case .paragraphStyle(let style):
             return (NSParagraphStyleAttributeName, style)
-        case .Color(let color):
+        case .color(let color):
             return (NSForegroundColorAttributeName, color)
-        case .BackgroundColor(let color):
+        case .backgroundColor(let color):
             return (NSBackgroundColorAttributeName, color)
-        case .Ligature(let ligature):
-            return (NSLigatureAttributeName, Int(ligature))
-        case .Kerning(let kerning):
-            return (NSKernAttributeName, kerning)
-        case .Strikethrough(let strikethrough):
-            return (NSStrikethroughStyleAttributeName, strikethrough.rawValue)
-        case .UnderlineStyle(let underline):
-            return (NSUnderlineStyleAttributeName, underline.rawValue)
-        case .StrokeColor(let color):
+        case .ligature(let ligature):
+            return (NSLigatureAttributeName, ligature ? 1 : 0)
+        case .kerning(let kerning):
+            return (NSKernAttributeName, kerning as AnyObject)
+        case .strikethrough(let strikethrough):
+            return (NSStrikethroughStyleAttributeName, strikethrough.rawValue as AnyObject)
+        case .underlineStyle(let underline):
+            return (NSUnderlineStyleAttributeName, underline.rawValue as AnyObject)
+        case .strokeColor(let color):
             return (NSStrokeColorAttributeName, color)
-        case .StrokeWidth(let width):
-            return (NSStrokeWidthAttributeName, width)
-        case .Shadow(let shadow):
+        case .strokeWidth(let width):
+            return (NSStrokeWidthAttributeName, width as AnyObject)
+        case .shadow(let shadow):
             return (NSShadowAttributeName, shadow)
-        case .TextEffect(let effect):
-            return (NSTextEffectAttributeName, effect.attributedAttributeName)
-        case .Attachment(let attachment):
+        case .textEffect(let effect):
+            return (NSTextEffectAttributeName, effect.attributedAttributeName as AnyObject)
+        case .attachment(let attachment):
             return (NSAttachmentAttributeName, attachment)
-        case .Link(let link):
-            return (NSLinkAttributeName, link)
-        case .LinkAsString(let link):
-            return (NSLinkAttributeName, link)
-        case .BaseLineOffset(let offset):
-            return (NSBaselineOffsetAttributeName, offset)
-        case .UnderlineColor(let color):
+        case .link(let link):
+            return (NSLinkAttributeName, link as AnyObject)
+        case .linkAsString(let link):
+            return (NSLinkAttributeName, link as AnyObject)
+        case .baseLineOffset(let offset):
+            return (NSBaselineOffsetAttributeName, offset as AnyObject)
+        case .underlineColor(let color):
             return (NSUnderlineColorAttributeName, color)
-        case .StrikethroughColor(let color):
+        case .strikethroughColor(let color):
             return (NSStrikethroughColorAttributeName, color)
-        case .Obliqueness(let obliqueness):
-            return (NSObliquenessAttributeName, obliqueness)
-        case .Expansion(let expansion):
-            return (NSExpansionAttributeName, expansion)
-        case .WritingDirection(let directions):
+        case .obliqueness(let obliqueness):
+            return (NSObliquenessAttributeName, obliqueness as AnyObject)
+        case .expansion(let expansion):
+            return (NSExpansionAttributeName, expansion as AnyObject)
+        case .writingDirection(let directions):
             return (NSWritingDirectionAttributeName, directions.map{ $0.rawValue })
-        case .VerticalGlyphForm(let glyphForm):
-            return (NSVerticalGlyphFormAttributeName, glyphForm.rawValue)
+        case .verticalGlyphForm(let glyphForm):
+            return (NSVerticalGlyphFormAttributeName, glyphForm.rawValue as AnyObject)
         }
     }
 }
 
-public class NSAttributedStringAttributeBuilder {
+open class NSAttributedStringAttributeBuilder {
     
-    private var attributesDictionary: [String : AnyObject] = [ : ]
+    fileprivate var attributesDictionary: [String : Any] = [ : ]
     
     public init() { }
     
-    public func setAttribute(attribute: NSAttributedStringAttribute) {
+    open func setAttribute(_ attribute: NSAttributedStringAttribute) {
         let keyValuePair = attribute.attributedStringKeyValuePair
         attributesDictionary.updateValue(keyValuePair.value, forKey: keyValuePair.key)
     }
     
-    public func attributedStringAttributesDictionary() -> [String: AnyObject]? {
+    open func attributedStringAttributesDictionary() -> [String: Any]? {
         return attributesDictionary
     }
 }
 
 public extension NSAttributedString {
     
-    public class func make(string: String, make: ((make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
+    public class func make(_ string: String, make: ((_ make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
         let builder = NSAttributedStringAttributeBuilder()
-        make(make: builder)
+        make(builder)
         return NSAttributedString(string: string, attributes: builder.attributedStringAttributesDictionary())
     }
 }

@@ -20,7 +20,7 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testItCreatesFontsCorrectly() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Font(UIFont(name: "Optima-ExtraBlack", size: 18)!))
+            make.setAttribute(.font(UIFont(name: "Optima-ExtraBlack", size: 18)!))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -29,10 +29,10 @@ class VeronaTests: FBSnapshotTestCase {
         
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
             let paragraph = NSMutableParagraphStyle()
-            paragraph.alignment = .Right
+            paragraph.alignment = .right
             paragraph.lineSpacing = 20
-            paragraph.lineBreakMode = NSLineBreakMode.ByCharWrapping
-            make.setAttribute(.ParagraphStyle(paragraph))
+            paragraph.lineBreakMode = NSLineBreakMode.byCharWrapping
+            make.setAttribute(.paragraphStyle(paragraph))
         }
         let label = wrapAsLabel(string)
         label.frame.size = CGSize(width: 75, height: 100)
@@ -43,14 +43,14 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testItCreatesColorCorrectly() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Color(UIColor.blueColor()))
+            make.setAttribute(.color(UIColor.blue))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
     
     func testItCreatesBackgroundColorCorrectly() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.BackgroundColor(UIColor.lightGrayColor()))
+            make.setAttribute(.backgroundColor(UIColor.lightGray))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -58,24 +58,27 @@ class VeronaTests: FBSnapshotTestCase {
     func testLigature() {
         
         let string = "Ciao, Verona. Un Caffé?"
-        let zapfino = UIFont(name: "Zapfino", size: 24) as UIFont!
+        let zapfino = UIFont(name: "Zapfino", size: 24)
+        
         //Demonstrate no ligature vs ligature. Ligature is the joining of certain characters, such as 'ff'
         let ligatureString = NSAttributedString.make(string) { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Ligature(true))
-            make.setAttribute(.Font(zapfino))
+            make.setAttribute(.ligature(true))
+            make.setAttribute(.font(zapfino!))
         }
         
         let noLigatureString = NSAttributedString.make(string) { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Ligature(false))
-            make.setAttribute(.Font(zapfino))
+            make.setAttribute(.ligature(false))
+            make.setAttribute(.font(zapfino!))
         }
         
         let ligatureLabel = wrapAsLabel(ligatureString)
         let noLigatureLabel = wrapAsLabel(noLigatureString)
-        let container = UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: ligatureLabel.frame.width, height: ligatureLabel.frame.height + noLigatureLabel.frame.height)))
+        let container = UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: ligatureLabel.frame.width, height: ligatureLabel.frame.height + noLigatureLabel.frame.height)))
         
         container.addSubview(ligatureLabel)
-        noLigatureLabel.frame.offsetInPlace(dx: 0, dy: ligatureLabel.frame.height)
+        
+        noLigatureLabel.frame = noLigatureLabel.frame.offsetBy(dx: 0, dy: ligatureLabel.frame.height)
+        
         container.addSubview(noLigatureLabel)
         
         FBSnapshotVerifyLayer(container.layer)
@@ -83,29 +86,29 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testItKerns() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Kerning(22))
+            make.setAttribute(.kerning(22))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
 
     func testItStrikeThroughs() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Strikethrough(NSUnderlineStyle.StyleSingle))
+            make.setAttribute(.strikethrough(NSUnderlineStyle.styleSingle))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
 
     func testItUnderlines() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.UnderlineStyle(NSUnderlineStyle.StyleSingle))
+            make.setAttribute(.underlineStyle(NSUnderlineStyle.styleSingle))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
     
     func testItStrokes() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.StrokeColor(UIColor.redColor()))
-            make.setAttribute(.StrokeWidth(4))
+            make.setAttribute(.strokeColor(UIColor.red))
+            make.setAttribute(.strokeWidth(4))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -113,16 +116,16 @@ class VeronaTests: FBSnapshotTestCase {
     func testItShadows() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
             let shadow = NSShadow()
-            shadow.shadowColor = UIColor.redColor()
+            shadow.shadowColor = UIColor.red
             shadow.shadowBlurRadius = 8
-            make.setAttribute(.Shadow(shadow))
+            make.setAttribute(.shadow(shadow))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
 
     func testItsTextEffects() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.TextEffect(NSTextEffectAttributeStyle.LetterPressStyle))
+            make.setAttribute(.textEffect(NSTextEffectAttributeStyle.letterPressStyle))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -137,14 +140,14 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testLinks() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Link(NSURL(string: "www.cocoapods.org")!))
+            make.setAttribute(.link(URL(string: "www.cocoapods.org")!))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
     
     func testStringLinks() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.LinkAsString("www.cocoapods.org"))
+            make.setAttribute(.linkAsString("www.cocoapods.org"))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -152,7 +155,7 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testBaseLineOffset() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.BaseLineOffset(10))
+            make.setAttribute(.baseLineOffset(10))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -160,30 +163,30 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testItUnderlinesWithColors() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.UnderlineStyle(NSUnderlineStyle.StyleSingle))
-            make.setAttribute(.UnderlineColor(UIColor.redColor()))
+            make.setAttribute(.underlineStyle(NSUnderlineStyle.styleSingle))
+            make.setAttribute(.underlineColor(UIColor.red))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
     
     func testItStrikeThroughsWithColor() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Strikethrough(NSUnderlineStyle.StyleSingle))
-            make.setAttribute(.StrikethroughColor(UIColor.redColor()))
+            make.setAttribute(.strikethrough(NSUnderlineStyle.styleSingle))
+            make.setAttribute(.strikethroughColor(UIColor.red))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
     
     func testItsObliqueness() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Obliqueness(2))
+            make.setAttribute(.obliqueness(2))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
     
     func testItsExpansion() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.Expansion(2))
+            make.setAttribute(.expansion(2))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -205,10 +208,10 @@ class VeronaTests: FBSnapshotTestCase {
 //    }
   
     //Helper for snapshot tests
-    func wrapAsLabel(string: NSAttributedString) -> UILabel {
+    func wrapAsLabel(_ string: NSAttributedString) -> UILabel {
         let label = UILabel()
         label.attributedText = string
-        label.backgroundColor = UIColor.whiteColor()
+        label.backgroundColor = UIColor.white
         label.sizeToFit()
         return label
     }

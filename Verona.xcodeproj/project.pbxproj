@@ -17,7 +17,8 @@
 		3EFF1B251B1F2069000A3040 /* Verona.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EFF1B191B1F2069000A3040 /* Verona.framework */; };
 		3EFF1B2C1B1F2069000A3040 /* VeronaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */; };
 		3EFF1B361B1F2071000A3040 /* Verona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFF1B351B1F2071000A3040 /* Verona.swift */; settings = {ATTRIBUTES = (Public, ); }; };
-		EBC625A6F833A00B7BD57772 /* Pods_VeronaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EB92635E9DBA43C720EDC86C /* Pods_VeronaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7B71C20F24D6AFDAAD8F52 /* Pods_VeronaApp.framework */; };
+		EF7E71A2371A7A06DAB5B85A /* Pods_VeronaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E17A8EA10DD57EFB4ED340FE /* Pods_VeronaTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2D36150783E85C8E139DA93E /* Pods-VeronaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaApp/Pods-VeronaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3E7C496E1B29AEBA00E1FC79 /* TryVerona.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TryVerona.playground; sourceTree = SOURCE_ROOT; };
 		3E9496DF1BC70E300016B12A /* VeronaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VeronaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E9496E11BC70E310016B12A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,8 +62,11 @@
 		3EFF1B2A1B1F2069000A3040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EFF1B2B1B1F2069000A3040 /* VeronaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeronaTests.swift; sourceTree = "<group>"; };
 		3EFF1B351B1F2071000A3040 /* Verona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Verona.swift; sourceTree = "<group>"; };
-		855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.release.xcconfig"; sourceTree = "<group>"; };
-		D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeronaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		650D1DF05FA73FF142B67E72 /* Pods-VeronaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.release.xcconfig"; sourceTree = "<group>"; };
+		D3B7E6D49FC9A32329908231 /* Pods-VeronaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaApp/Pods-VeronaApp.release.xcconfig"; sourceTree = "<group>"; };
+		E17A8EA10DD57EFB4ED340FE /* Pods_VeronaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeronaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83A3C022FA1BA111126EEEF /* Pods-VeronaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeronaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF7B71C20F24D6AFDAAD8F52 /* Pods_VeronaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeronaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E9496F71BC73FA70016B12A /* Verona.framework in Frameworks */,
+				EB92635E9DBA43C720EDC86C /* Pods_VeronaApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,22 +91,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFF1B251B1F2069000A3040 /* Verona.framework in Frameworks */,
-				EBC625A6F833A00B7BD57772 /* Pods_VeronaTests.framework in Frameworks */,
+				EF7E71A2371A7A06DAB5B85A /* Pods_VeronaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27E15F6163FF6B2F2E79DAFE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */,
-				855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		3E9496E01BC70E310016B12A /* VeronaApp */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,8 +119,8 @@
 				3EFF1B281B1F2069000A3040 /* VeronaTests */,
 				3E9496E01BC70E310016B12A /* VeronaApp */,
 				3EFF1B1A1B1F2069000A3040 /* Products */,
-				27E15F6163FF6B2F2E79DAFE /* Pods */,
-				4A2E0E4F9AE45837D5A105DC /* Frameworks */,
+				7ECEBFACDC13D09E23936849 /* Pods */,
+				A80F0B8DBF31066AD2C60FE9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,10 +169,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		4A2E0E4F9AE45837D5A105DC /* Frameworks */ = {
+		7ECEBFACDC13D09E23936849 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D792F9AB46B47ADC3B2B87D7 /* Pods_VeronaTests.framework */,
+				2D36150783E85C8E139DA93E /* Pods-VeronaApp.debug.xcconfig */,
+				D3B7E6D49FC9A32329908231 /* Pods-VeronaApp.release.xcconfig */,
+				E83A3C022FA1BA111126EEEF /* Pods-VeronaTests.debug.xcconfig */,
+				650D1DF05FA73FF142B67E72 /* Pods-VeronaTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A80F0B8DBF31066AD2C60FE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF7B71C20F24D6AFDAAD8F52 /* Pods_VeronaApp.framework */,
+				E17A8EA10DD57EFB4ED340FE /* Pods_VeronaTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -199,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E9496F01BC70E310016B12A /* Build configuration list for PBXNativeTarget "VeronaApp" */;
 			buildPhases = (
+				5D4F9980C939B6C829E5DAF0 /* [CP] Check Pods Manifest.lock */,
 				3E9496DB1BC70E300016B12A /* Sources */,
 				3E9496DC1BC70E300016B12A /* Frameworks */,
 				3E9496DD1BC70E300016B12A /* Resources */,
+				D2CBBCA7BCAD5EBF5A4B4780 /* [CP] Embed Pods Frameworks */,
+				70F0BA574C95F4610E4B6552 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -235,12 +246,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3EFF1B321B1F2069000A3040 /* Build configuration list for PBXNativeTarget "VeronaTests" */;
 			buildPhases = (
-				E234C1856B150A890F47B08B /* Check Pods Manifest.lock */,
+				A578601B42DDD5392C4E94C5 /* [CP] Check Pods Manifest.lock */,
 				3EFF1B201B1F2069000A3040 /* Sources */,
 				3EFF1B211B1F2069000A3040 /* Frameworks */,
 				3EFF1B221B1F2069000A3040 /* Resources */,
-				63E70412EAE27591FAAE9B4D /* Copy Pods Resources */,
-				4A3F4566230EB39FE1BF37A2 /* Embed Pods Frameworks */,
+				21846646C022F05007DDB145 /* [CP] Embed Pods Frameworks */,
+				49A7B54B8AA9C19C6678DFDA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -266,12 +277,15 @@
 				TargetAttributes = {
 					3E9496DE1BC70E300016B12A = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					3EFF1B181B1F2069000A3040 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
 					};
 					3EFF1B231B1F2069000A3040 = {
 						CreatedOnToolsVersion = 6.3.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = 3E9496DE1BC70E300016B12A;
 					};
 				};
@@ -324,14 +338,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4A3F4566230EB39FE1BF37A2 /* Embed Pods Frameworks */ = {
+		21846646C022F05007DDB145 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,14 +353,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		63E70412EAE27591FAAE9B4D /* Copy Pods Resources */ = {
+		49A7B54B8AA9C19C6678DFDA /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,19 +368,64 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeronaTests/Pods-VeronaTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E234C1856B150A890F47B08B /* Check Pods Manifest.lock */ = {
+		5D4F9980C939B6C829E5DAF0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		70F0BA574C95F4610E4B6552 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeronaApp/Pods-VeronaApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A578601B42DDD5392C4E94C5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D2CBBCA7BCAD5EBF5A4B4780 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VeronaApp/Pods-VeronaApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -439,6 +498,7 @@
 /* Begin XCBuildConfiguration section */
 		3E9496EE1BC70E310016B12A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D36150783E85C8E139DA93E /* Pods-VeronaApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -447,11 +507,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.randazzo.VeronaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		3E9496EF1BC70E310016B12A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3B7E6D49FC9A32329908231 /* Pods-VeronaApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = VeronaApp/Info.plist;
@@ -459,6 +521,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.randazzo.VeronaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -568,6 +631,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -586,12 +650,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.randazzo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		3EFF1B331B1F2069000A3040 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03FCBEE94F1C663A72C7C85F /* Pods-VeronaTests.debug.xcconfig */;
+			baseConfigurationReference = E83A3C022FA1BA111126EEEF /* Pods-VeronaTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_CODE_COVERAGE = NO;
@@ -610,13 +675,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeronaApp.app/VeronaApp";
 			};
 			name = Debug;
 		};
 		3EFF1B341B1F2069000A3040 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 855CE4864B83DA5E169C99D1 /* Pods-VeronaTests.release.xcconfig */;
+			baseConfigurationReference = 650D1DF05FA73FF142B67E72 /* Pods-VeronaTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_CODE_COVERAGE = NO;
@@ -630,6 +696,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.randazzo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeronaApp.app/VeronaApp";
 			};
 			name = Release;
