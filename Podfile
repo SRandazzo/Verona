@@ -1,16 +1,21 @@
-# Uncomment this line to define a global platform for your project
-# platform :ios, '8.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
 
-use_frameworks!
+target 'Verona' do
+  use_frameworks!
 
-target 'VeronaApp' do
-
-pod 'Verona', :path => "./"
+  target 'VeronaTests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'FBSnapshotTestCase/SwiftSupport', :git => 'https://github.com/facebook/ios-snapshot-test-case.git', :commit => 'da629211c17a4c507e2e866e8a19ed3122af770b'
+  end
 
 end
 
-target 'VeronaTests' do
-pod 'FBSnapshotTestCase/SwiftSupport', :git => 'https://github.com/facebook/ios-snapshot-test-case.git', :commit => 'da629211c17a4c507e2e866e8a19ed3122af770b'
+target 'VeronaApp' do
+  use_frameworks!
+  # Pods for VeronaApp
+  pod 'Verona', :path => "./"
 end
 
 post_install do |installer|

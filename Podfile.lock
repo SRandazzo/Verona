@@ -13,7 +13,7 @@ EXTERNAL SOURCES:
     :commit: da629211c17a4c507e2e866e8a19ed3122af770b
     :git: https://github.com/facebook/ios-snapshot-test-case.git
   Verona:
-    :path: "./"
+    :path: ./
 
 CHECKOUT OPTIONS:
   FBSnapshotTestCase:
@@ -22,8 +22,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 918c55861356ee83aee7843d759f55a18ff6982b
-  Verona: a5c9246ee3f7a5d384397cf3d6f4eaaecd54ff35
+  Verona: bd06e6a7252edc181618b78c2d339a6edbf74cbe
 
-PODFILE CHECKSUM: 52b5ba825c8e818b5276088789187eeca79e03d7
+PODFILE CHECKSUM: b92d5e75d79a6fab197d13a997c0343ea021e585
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.rc.2
