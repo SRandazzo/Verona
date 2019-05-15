@@ -8,17 +8,6 @@
 
 import Foundation
 
-public enum NSTextEffectAttributeStyle {
-    case letterPressStyle
-    
-    public var attributedAttributeName: String {
-        switch self {
-        case .letterPressStyle:
-            return NSTextEffectLetterpressStyle
-        }
-    }
-}
-
 public enum VerticalGlyphFormDirection: Int {
     case horizontal = 0
     case vertical = 1
@@ -40,7 +29,7 @@ public enum NSAttributedStringAttribute {
     case strokeColor(UIColor)
     case strokeWidth(CGFloat)
     case shadow(NSShadow)
-    case textEffect(NSTextEffectAttributeStyle)
+    case textEffect(NSAttributedString.TextEffectStyle)
     case attachment(NSTextAttachment)
     case link(URL)
     case linkAsString(String)
@@ -50,59 +39,59 @@ public enum NSAttributedStringAttribute {
     case writingDirection([NSTextWritingDirection])
     case verticalGlyphForm(VerticalGlyphFormDirection) //1 vertical, 0 horiztonal
     
-    public var attributedStringKeyValuePair: (key: String, value: Any) {
+    public var attributedStringKeyValuePair: (key: NSAttributedString.Key, value: Any) {
         switch self {
         case .font(let font):
-            return (NSFontAttributeName, font)
+            return (NSAttributedString.Key.font, font)
         case .paragraphStyle(let style):
-            return (NSParagraphStyleAttributeName, style)
+            return (NSAttributedString.Key.paragraphStyle, style)
         case .color(let color):
-            return (NSForegroundColorAttributeName, color)
+            return (NSAttributedString.Key.foregroundColor, color)
         case .backgroundColor(let color):
-            return (NSBackgroundColorAttributeName, color)
+            return (NSAttributedString.Key.backgroundColor, color)
         case .ligature(let ligature):
-            return (NSLigatureAttributeName, ligature ? 1 : 0)
+            return (NSAttributedString.Key.ligature, ligature ? 1 : 0)
         case .kerning(let kerning):
-            return (NSKernAttributeName, kerning as AnyObject)
+            return (NSAttributedString.Key.kern, kerning as AnyObject)
         case .strikethrough(let strikethrough):
-            return (NSStrikethroughStyleAttributeName, strikethrough.rawValue as AnyObject)
+            return (NSAttributedString.Key.strikethroughStyle, strikethrough.rawValue as AnyObject)
         case .underlineStyle(let underline):
-            return (NSUnderlineStyleAttributeName, underline.rawValue as AnyObject)
+            return (NSAttributedString.Key.underlineStyle, underline.rawValue as AnyObject)
         case .strokeColor(let color):
-            return (NSStrokeColorAttributeName, color)
+            return (NSAttributedString.Key.strokeColor, color)
         case .strokeWidth(let width):
-            return (NSStrokeWidthAttributeName, width as AnyObject)
+            return (NSAttributedString.Key.strokeWidth, width as AnyObject)
         case .shadow(let shadow):
-            return (NSShadowAttributeName, shadow)
+            return (NSAttributedString.Key.shadow, shadow)
         case .textEffect(let effect):
-            return (NSTextEffectAttributeName, effect.attributedAttributeName as AnyObject)
+            return (NSAttributedString.Key.textEffect, effect as AnyObject)
         case .attachment(let attachment):
-            return (NSAttachmentAttributeName, attachment)
+            return (NSAttributedString.Key.attachment, attachment)
         case .link(let link):
-            return (NSLinkAttributeName, link as AnyObject)
+            return (NSAttributedString.Key.link, link as AnyObject)
         case .linkAsString(let link):
-            return (NSLinkAttributeName, link as AnyObject)
+            return (NSAttributedString.Key.link, link as AnyObject)
         case .baseLineOffset(let offset):
-            return (NSBaselineOffsetAttributeName, offset as AnyObject)
+            return (NSAttributedString.Key.baselineOffset, offset as AnyObject)
         case .underlineColor(let color):
-            return (NSUnderlineColorAttributeName, color)
+            return (NSAttributedString.Key.underlineColor, color)
         case .strikethroughColor(let color):
-            return (NSStrikethroughColorAttributeName, color)
+            return (NSAttributedString.Key.strikethroughColor, color)
         case .obliqueness(let obliqueness):
-            return (NSObliquenessAttributeName, obliqueness as AnyObject)
+            return (NSAttributedString.Key.obliqueness, obliqueness as AnyObject)
         case .expansion(let expansion):
-            return (NSExpansionAttributeName, expansion as AnyObject)
+            return (NSAttributedString.Key.expansion, expansion as AnyObject)
         case .writingDirection(let directions):
-            return (NSWritingDirectionAttributeName, directions.map{ $0.rawValue })
+            return (NSAttributedString.Key.writingDirection, directions.map{ $0.rawValue })
         case .verticalGlyphForm(let glyphForm):
-            return (NSVerticalGlyphFormAttributeName, glyphForm.rawValue as AnyObject)
+            return (NSAttributedString.Key.verticalGlyphForm, glyphForm.rawValue as AnyObject)
         }
     }
 }
 
 open class NSAttributedStringAttributeBuilder {
     
-    fileprivate var attributesDictionary: [String : Any] = [ : ]
+    fileprivate var attributesDictionary: [NSAttributedString.Key : Any] = [ : ]
     
     public init() { }
     
@@ -111,7 +100,7 @@ open class NSAttributedStringAttributeBuilder {
         attributesDictionary.updateValue(keyValuePair.value, forKey: keyValuePair.key)
     }
     
-    open func attributedStringAttributesDictionary() -> [String: Any]? {
+    open func attributedStringAttributesDictionary() -> [NSAttributedString.Key: Any]? {
         return attributesDictionary
     }
 }

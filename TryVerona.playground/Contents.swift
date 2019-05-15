@@ -8,9 +8,9 @@ import Verona
 let helloVerona = "Welcome to Verona! There are a few ways to use Verona. The first is an extension on NSAttributedString that provides a `make` closure to configure your string."
 
 let attributedString = NSAttributedString.make(helloVerona, make: { (make) -> Void in
-    make.setAttribute(.Font(UIFont(name: "HelveticaNeue", size: 18)!))
-    make.setAttribute(NSAttributedStringAttribute.Kerning(3))
-    make.setAttribute(NSAttributedStringAttribute.Color(UIColor(red: 163/255.0, green: 133/255, blue: 70/255, alpha: 1.0)))
+    make.setAttribute(.font(UIFont(name: "HelveticaNeue", size: 18)!))
+    make.setAttribute(.kerning(3))
+    make.setAttribute(.color(UIColor(red: 163/255.0, green: 133/255, blue: 70/255, alpha: 1.0)))
 })
 
 
@@ -18,10 +18,10 @@ let attributedString = NSAttributedString.make(helloVerona, make: { (make) -> Vo
 let alternatively = "Alternatively, you can use the builder directly to configure your attributed string, then ask the builder for the NSAttributedString formatted dictionary"
 
 let builder = NSAttributedStringAttributeBuilder()
-builder.setAttribute(.Font(UIFont(name: "HelveticaNeue", size: 18)!))
-builder.setAttribute(NSAttributedStringAttribute.Kerning(1))
-builder.setAttribute(.UnderlineStyle(NSUnderlineStyle.StyleDouble))
-builder.setAttribute(NSAttributedStringAttribute.Color(UIColor.greenColor()))
+builder.setAttribute(.font(UIFont(name: "HelveticaNeue", size: 18)!))
+builder.setAttribute(.kerning(1))
+builder.setAttribute(.underlineStyle(NSUnderlineStyle.double))
+builder.setAttribute(.color(UIColor.green))
 
 let string = NSAttributedString(string: alternatively, attributes: builder.attributedStringAttributesDictionary())
 
@@ -29,10 +29,10 @@ let string = NSAttributedString(string: alternatively, attributes: builder.attri
 //: Applying generators within a range
 
 let redBuilder = NSAttributedStringAttributeBuilder()
-redBuilder.setAttribute(.Font(UIFont(name: "HelveticaNeue", size: 18)!))
-redBuilder.setAttribute(NSAttributedStringAttribute.Kerning(4))
-redBuilder.setAttribute(.UnderlineStyle(NSUnderlineStyle.StyleSingle))
-redBuilder.setAttribute(NSAttributedStringAttribute.Color(UIColor.redColor()))
+redBuilder.setAttribute(.font(UIFont(name: "HelveticaNeue", size: 18)!))
+redBuilder.setAttribute(.kerning(4))
+redBuilder.setAttribute(.underlineStyle(NSUnderlineStyle.single))
+redBuilder.setAttribute(.color(UIColor.red))
 
 let partialString = NSMutableAttributedString(string: "In this example, we are only applying attributes to a part of the string")
 

@@ -93,14 +93,14 @@ class VeronaTests: FBSnapshotTestCase {
 
     func testItStrikeThroughs() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.strikethrough(NSUnderlineStyle.styleSingle))
+            make.setAttribute(.strikethrough(NSUnderlineStyle.single))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
 
     func testItUnderlines() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.underlineStyle(NSUnderlineStyle.styleSingle))
+            make.setAttribute(.underlineStyle(NSUnderlineStyle.single))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -125,7 +125,7 @@ class VeronaTests: FBSnapshotTestCase {
 
     func testItsTextEffects() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.textEffect(NSTextEffectAttributeStyle.letterPressStyle))
+            make.setAttribute(.textEffect(.letterpressStyle))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
     }
@@ -163,7 +163,7 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testItUnderlinesWithColors() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.underlineStyle(NSUnderlineStyle.styleSingle))
+            make.setAttribute(.underlineStyle(NSUnderlineStyle.single))
             make.setAttribute(.underlineColor(UIColor.red))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
@@ -171,7 +171,7 @@ class VeronaTests: FBSnapshotTestCase {
     
     func testItStrikeThroughsWithColor() {
         let string = NSAttributedString.make("Ciao, Verona") { (make: NSAttributedStringAttributeBuilder) -> Void in
-            make.setAttribute(.strikethrough(NSUnderlineStyle.styleSingle))
+            make.setAttribute(.strikethrough(NSUnderlineStyle.single))
             make.setAttribute(.strikethroughColor(UIColor.red))
         }
         FBSnapshotVerifyLayer(wrapAsLabel(string).layer)
