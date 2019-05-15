@@ -270,30 +270,30 @@
 			attributes = {
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Salvatore Randazzo";
 				TargetAttributes = {
 					3E9496DE1BC70E300016B12A = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = EPM348UVLC;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 					3EFF1B181B1F2069000A3040 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = EPM348UVLC;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 					};
 					3EFF1B231B1F2069000A3040 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = EPM348UVLC;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 1020;
 						TestTargetID = 3E9496DE1BC70E300016B12A;
 					};
 				};
 			};
 			buildConfigurationList = 3EFF1B131B1F2069000A3040 /* Build configuration list for PBXProject "Verona" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -491,7 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.randazzo.VeronaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -506,7 +506,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.randazzo.VeronaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -625,7 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = EPM348UVLC;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -639,7 +639,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -660,7 +660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.randazzo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -686,7 +686,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeronaApp.app/VeronaApp";
 			};
 			name = Debug;
@@ -708,7 +708,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.randazzo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VeronaApp.app/VeronaApp";
 			};
 			name = Release;

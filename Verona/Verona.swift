@@ -107,7 +107,7 @@ open class NSAttributedStringAttributeBuilder {
 
 public extension NSAttributedString {
     
-    public class func make(_ string: String, make: ((_ make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
+    class func make(_ string: String, make: ((_ make: NSAttributedStringAttributeBuilder) -> Void)) -> NSAttributedString {
         let builder = NSAttributedStringAttributeBuilder()
         make(builder)
         return NSAttributedString(string: string, attributes: builder.attributedStringAttributesDictionary())
