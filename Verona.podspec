@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Verona/Verona.swift'
 
-  s.swift_version = '5.0' 
+  s.swift_version = '4.2' 
 
   s.requires_arc = true
 end
